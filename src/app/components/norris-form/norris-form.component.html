@@ -1,0 +1,19 @@
+<h1>¡Chuck Norris está de broma!</h1>
+<form [formGroup]="this.formChistes" class="form">
+    <fieldset >
+        <legend>Categorías de Chistes</legend>
+        <select formControlName = "categoria" (change)="seleccionCategoria($event)" >
+            <!--<option value="-1">Selecciona categoria...</option>-->
+            <option [value]="categoria"  *ngFor="let categoria of categorias">{{ categoria }}</option>
+        </select>
+        <button type="submit" (click)="cargaChiste()">Chiste</button>
+    </fieldset>
+</form>
+<div class="chiste">
+    <fieldset >
+        <legend>Chiste al azar</legend>
+        <div class="parrafo">
+            <p *ngIf="chiste" [chiste]="chiste">{{ chiste.value }}</p>
+        </div>
+    </fieldset>
+</div>

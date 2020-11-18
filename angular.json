@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Practica06"
+    }
+  },
+  "defaultProject": "Practica06",
+  "cli": {
+    "analytics": false
+  }
 }
